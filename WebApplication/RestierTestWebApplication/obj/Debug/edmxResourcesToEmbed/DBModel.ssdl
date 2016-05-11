@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_EquipmentProperty' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_kep_logger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_MaterialLot_Request' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_PrintProperties' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_ProductionParameter_Files' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_ProductionResponse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_Property' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'B2MML-BatchML.dbo.v_System_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v_System_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SYSTEM_USER" Type="nvarchar" MaxLength="128" />
+    <Property Name="CURRENT_USER" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="v_System_User" EntityType="Self.v_System_User" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_System_User].[ID] AS [ID], 
+    [v_System_User].[SYSTEM_USER] AS [SYSTEM_USER], 
+    [v_System_User].[CURRENT_USER] AS [CURRENT_USER]
+    FROM [dbo].[v_System_User] AS [v_System_User]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
